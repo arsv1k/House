@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход / Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+    <header class="site-header">
+    <a href="index.html" class="logo">SmartДом</a>
+    </header>
+
+<div class="auth-container">
+    <div class="auth-box" id="authBox">
+
+        <!-- Вход -->
+        <div class="form login-form">
+            <h2>Вход</h2>
+
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Пароль">
+
+            <button class="auth-submit">Войти</button>
+
+            <p class="switch-text">
+                Нет аккаунта?
+                <span id="toRegister">Регистрация</span>
+            </p>
+        </div>
+
+        <!-- Регистрация -->
+        <div class="form register-form">
+            <h2>Регистрация</h2>
+
+            <input type="text" placeholder="Имя">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Пароль">
+
+            <button class="auth-submit">Создать аккаунт</button>
+
+            <p class="switch-text">
+                Уже есть аккаунт?
+                <span id="toLogin">Войти</span>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+const authBox = document.getElementById('authBox');
+
+// переключение вручную
+document.getElementById('toRegister').onclick = () => {
+    authBox.classList.add('active');
+};
+
+document.getElementById('toLogin').onclick = () => {
+    authBox.classList.remove('active');
+};
+
+// проверяем параметр в URL
+const params = new URLSearchParams(window.location.search);
+
+if (params.get('mode') === 'register') {
+    authBox.classList.add('active');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartДом</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+
+<!-- Шапка -->
+    <div class="header-top">
+        <img src="ico.png" class="ico" alt="logo">
+        <div class="header-center">
+            <h1>SmartДом</h1>
+            <div class="search">
+                <input class="input" placeholder="Search..." type="text">
+                <button class="btn">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+    <div class="header-actions">
+        <div class="auth-group">
+            <button class="login-btn" onclick="location.href='auth.html'">
+                Войти
+            </button>
+
+            <button class="register-btn" onclick="location.href='auth.html?mode=register'">
+                Регистрация
+            </button>
+        </div>
+        <button id="phoneBtn">
+            <ion-icon name="call-outline"></ion-icon>Связаться
+        </button>
+    </div>
+</div>
+
+    <!-- Полоса под шапкой -->
+    <div class="bar">
+        <div class="sent1">Умный подбор жилья</div>
+        <div class="sent2">Лучшие предложение на рынке</div>
+    </div>
+
+</header>
+
+<main>
+   <section class="cards">
+
+  <div class="card-row">
+
+    
+    <div class="card card-image">
+      <img src="house1.jpg" alt="Квартира">
+    </div>
+
+    
+    <div class="card card-text">
+      <div class="text-content">
+    <h3>Квартира в центре города</h3>
+
+    <p>
+        Просторная и светлая квартира с современной планировкой,
+        расположенная в шаговой доступности от метро и городской
+        инфраструктуры.
+    </p>
+
+    <p>
+        В квартире выполнен качественный ремонт, установлены
+        энергосберегающие окна, продуманное освещение и удобные
+        зоны хранения.
+    </p>
+
+    <p>
+        Отличный вариант как для комфортного проживания,
+        так и для инвестиции с высокой ликвидностью.
+    </p>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="card-row">
+
+    
+    <div class="card card-image">
+        <img src="house2.jpg" alt="Уютная квартира">
+    </div>
+
+    
+    <div class="card card-text">
+        <div class="text-content">
+            <h3>Уютная квартира для комфортной жизни</h3>
+
+            <p>
+                Светлая квартира с продуманной планировкой,
+                идеально подходящая для одного человека
+                или молодой семьи.
+            </p>
+
+            <p>
+                В помещении выполнен аккуратный ремонт,
+                установлена функциональная мебель и
+                предусмотрены удобные зоны хранения.
+            </p>
+
+            <p>
+                Тихий район, развитая инфраструктура и
+                удобная транспортная доступность делают
+                этот вариант отличным выбором.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+</section>
+</main>
+
+<!-- Навигация по сайту -->
+<section class="info-bar">
+    <button class="info-link" data-link="catalog.html">Каталог квартир</button>
+    <button class="info-link" data-link="new.html">Новостройки</button>
+    <button class="info-link" data-link="rent.html">Аренда</button>
+    <button class="info-link" data-link="mortgage.html">Ипотека</button>
+    <button class="info-link" data-link="contacts.html">Контакты</button>
+
+    <span class="active-indicator"></span>
+</section>
+
+
+
+
+<footer class="footer-bar">
+    © 2025 SmartДом. Все права защищены
+</footer>
+
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
